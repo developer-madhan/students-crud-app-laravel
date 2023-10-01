@@ -42,7 +42,7 @@ class StudentController extends Controller
     public function show(string $id)
     {
         $student= DB::select('select * from students where id=?',[$id]);
-        return view('show_form',[$student]);
+        return view('show_form',['student'=>$student]);
     }
 
     /**
